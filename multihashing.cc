@@ -433,7 +433,7 @@ Handle<Value> cryptonight(const Arguments& args) {
 Handle<Value> cryptonight_heavy(const Arguments& args) {
     HandleScope scope;
 
-    if (args.Length() != 1)
+    if (args.Length() < 1)
         return except("You must provide one argument.");
 
     Local<Object> target = args[0]->ToObject();
