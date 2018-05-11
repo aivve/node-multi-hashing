@@ -446,16 +446,16 @@ Handle<Value> cryptonight_heavy(const Arguments& args) {
     
     uint32_t input_len = Buffer::Length(target);
 
-    //if(input_len == 0 || input[0] >= 0x03)
-    //{
+	if (input_len == 0 || input[0] >= 0x4)
+    {
         cn_heavy::cn_pow_hash_v2 ctx;
         ctx.hash(input, input_len, output);
-    /*}
+    }
     else
     {
         cn_heavy::cn_pow_hash_v1 ctx;
         ctx.hash(input, input_len, output);
-    }*/
+    }
 
     Buffer* buff = Buffer::New(output, 32);
     return scope.Close(buff->handle_);
