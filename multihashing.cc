@@ -389,6 +389,7 @@ DECLARE_INIT(init) {
     NODE_SET_METHOD(exports, "nist5", nist5);
     NODE_SET_METHOD(exports, "quark", quark);
     NODE_SET_METHOD(exports, "qubit", qubit);
+	NODE_SET_METHOD(exports, "rainforest", rainforest);
     NODE_SET_METHOD(exports, "scrypt", scrypt);
     NODE_SET_METHOD(exports, "scryptjane", scryptjane);
     NODE_SET_METHOD(exports, "scryptn", scryptn);
@@ -398,7 +399,6 @@ DECLARE_INIT(init) {
     NODE_SET_METHOD(exports, "x11", x11);
     NODE_SET_METHOD(exports, "x13", x13);
     NODE_SET_METHOD(exports, "x15", x15);
-    NODE_SET_METHOD(exports, "rainforest", rainforest);
 }
 
 NODE_MODULE(multihashing, init)
