@@ -1,6 +1,6 @@
 {
-    "name": "turtlecoin-multi-hashing",
-    "version": "0.0.11",
+    "name": "karbo-multi-hashing",
+    "version": "0.0.12",
     "main": "multihashing",
     "gypfile": true,
     "author": {
@@ -8,12 +8,13 @@
         "email": "zone117x@gmail.com"
     },
     "contributors": [
-        "Brandon Lehmann <brandonlehmann@gmail.com>"
+        "Brandon Lehmann <brandonlehmann@gmail.com>",
+        "Valerii Maksymiv <maksymivv@gmail.com>"
     ],
     "license": "GPL-3.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/turtlecoin/node8-multi-hashing.git"
+        "url": "https://github.com/aivve/node-multi-hashing.git"
     },
     "scripts": {
         "test": "node-gyp clean && node-gyp configure && node-gyp build"
@@ -36,7 +37,8 @@
         "shavite",
         "fugue",
         "sha1",
-        "turtlecoin",
-        "cryptonight"
+        "karbo",
+        "cryptonight",
+        "rainforest"
     ]
 }
