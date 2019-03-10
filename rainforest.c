@@ -811,9 +811,12 @@ void rainforest_hash(const void* input, void* output, uint32_t len) {
   rf256_ctx_t ctx;
   uint8_t hash[32];
 
-  rf256_init(&ctx);
-  rf256_update(&ctx, input, len);
-  rf256_final(hash, &ctx);
-  rf256_update(&ctx, (char *)hash, sizeof(hash));
-  rf256_final(output, &ctx);
+  //rf256_init(&ctx);
+  //rf256_update(&ctx, input, len);
+  //rf256_final(hash, &ctx);
+  //rf256_update(&ctx, (char *)hash, sizeof(hash));
+  //rf256_final(output, &ctx);
+
+  rf256_hash(hash, input, len);
+  rf256_hash(output, hash, sizeof(hash));
 }
